@@ -1,0 +1,170 @@
+REACTJS : 
+
+**initialize command : 
+npx create-react-app 01basicreact
+
+ cd 01basicreact
+ npm run start
+
+**initialize command : 
+npm create vite@latest
+--
+Need to install the following packages:
+create-vite@5.4.0
+Ok to proceed? (y) y
+--
+ cd 01vitereact
+ npm install
+ npm run dev
+
+npm install bootstrap
+
+Note :
+on UI updating reactjs is working behind it. 
+- use key attribute when we apply loop in the react jsx file it will increase the performance while looping
+
+
+API are in the string format it should be converted into the JSON format .json()
+
+ShortCut :
+rfce
+
+___________________________ 
+
+Basic Hooks : 
+1. useState
+- Purpose: Allows you to add state to functional components.
+- Usage:
+const [state, setState] = useState(initialState);
+
+2. useEffect
+- Purpose: Allows you to perform side effects in your components, such as data fetching, subscriptions, or manually changing the DOM.
+- Usage:
+useEffect(() => {
+  // Your code here
+}, [dependencies]);
+
+3. useContext
+- Purpose: Allows you to subscribe to React context without introducing nesting.
+- Usage:
+const value = useContext(MyContext);
+
+Additional Hooks :
+4. useReducer
+- Purpose: An alternative to useState for more complex state logic.
+- Usage:
+const [state, dispatch] = useReducer(reducer, initialState);
+"action" - is the description of what you want to do, while
+"dispatch" - is the function that carries out the action
+
+5. useCallback
+- Purpose: Returns a memoized callback.
+- Usage:
+const memoizedCallback = useCallback(() => {
+  // Your code here
+}, [dependencies]);
+
+6. useMemo
+- Purpose: Returns a memoized value.
+- Usage:
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+7. useRef
+- Purpose: Returns a mutable ref object whose .current property is initialized to the passed argument.
+- Usage:
+const refContainer = useRef(initialValue);
+
+8. useImperativeHandle
+- Purpose: Customizes the instance value that is exposed when using ref with forwardRef.
+- Usage:
+useImperativeHandle(ref, () => ({
+  // Exposed properties/methods
+}));
+
+9. useLayoutEffect
+- Purpose: The signature is identical to useEffect, but it fires synchronously after all DOM mutations.
+- Usage:
+useLayoutEffect(() => {
+  // Your code here
+}, [dependencies]);
+
+10. useDebugValue
+- Purpose: Can be used to display a label for custom hooks in React DevTools.
+- Usage:
+useDebugValue(value);
+
+Custom Hooks :
+- Purpose: Create custom hooks to reuse stateful logic between components.
+- Usage:
+function useCustomHook() {
+  const [state, setState] = useState(initialState);
+  // Your custom logic
+  return [state, setState];
+}
+
+Example of Using Basic Hooks :
+Here's an example that demonstrates the use of useState and useEffect:
+
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [count]);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default Example;
+
+Summary :
+-Basic Hooks: useState, useEffect, useContext
+- Additional Hooks: useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, useDebugValue
+- Custom Hooks: Create your own hooks to encapsulate reusable logic.
+
+
+Redux --> independent state management library --> for that we react-redux library
+
+Redux-Toolkit - 
+
+we have some concepts :
+1. store
+2. reducers
+3. useSelector
+4. useDispatch
+
+
+Mega Project : 
+reduxjs/toolkit :
+
+react-redux :
+
+react-router-dom :
+
+Appwite - open-source backend platform offering essential APIs for building web and mobile applications.
+
+tinymce - help us in the virtual visual code editor
+
+html-react-parser - The parser converts an HTML string to one or more React elements
+
+react-hook-from - Creating a form is no more complicated while building a react application
+
+
+
+
+
+
+
+
+
+
+
